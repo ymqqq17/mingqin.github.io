@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name</title>
+  <meta name="description" content="Research homepage of Your Name." />
+  <style>
+    :root{
+      --bg:#111315;
+      --card:#161a1d;
+      --text:#e8e8e8;
+      --muted:#b7bcc2;
+      --line:#262b31;
+      --link:#61b8ff;
+      --chip:#0f2a3b;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif;
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px; margin:0 auto; padding:42px 20px 64px;}
+    .hero{
+      display:grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap:28px;
+      align-items:start;
+    }
+    @media (max-width: 840px){
+      .hero{grid-template-columns:1fr; }
+    }
+    h1{margin:0; font-size:44px; letter-spacing:-0.5px}
+    .affil{margin-top:6px; color:var(--muted)}
+    .bio{margin-top:18px; color:var(--text)}
+    .links{margin-top:16px; display:flex; flex-wrap:wrap; gap:14px; color:var(--muted)}
+    .links span{color:var(--muted)}
+    .photo{
+      width:100%;
+      border-radius:14px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background:var(--card);
+    }
+    .photo img{display:block; width:100%; height:auto}
+    .section{margin-top:34px;}
+    .section h2{
+      font-size:28px;
+      margin:0 0 14px 0;
+      letter-spacing:-0.2px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:18px;
+    }
+
+    /* Announcements */
+    .ann{
+      display:grid;
+      grid-template-columns: 110px 1fr;
+      gap:14px 18px;
+      align-items:start;
+    }
+    .ann .date{color:var(--muted); font-weight:600}
+    .ann .item{color:var(--text)}
+    .ann .item + .date{margin-top:8px}
+
+    /* Publications */
+    .pub{
+      display:grid;
+      grid-template-columns: 86px 1fr;
+      gap:12px 16px;
+      align-items:start;
+    }
+    .badge{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      height:22px;
+      padding:0 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:var(--chip);
+      color:#bfe5ff;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:0.2px;
+      width:max-content;
+    }
+    .pubtitle{font-weight:700}
+    .pubmeta{color:var(--muted); margin-top:3px}
+    .publinks{margin-top:6px; color:var(--muted)}
+    .publinks a{margin-right:10px}
+
+    footer{
+      margin-top:46px;
+      color:var(--muted);
+      border-top:1px solid var(--line);
+      padding-top:18px;
+      font-size:14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- Top: name + bio + photo (no nav) -->
+    <div class="hero">
+      <div>
+        <h1>Your <span style="color:#ffffff">Name</span></h1>
+        <div class="affil">Statistical Sciences, University of Toronto</div>
+
+        <div class="bio">
+          <p>
+            Since Fall 2025, I am a … (1–2 sentences about your position).
+            My research focuses on <b>probabilistic modeling</b>, <b>Gaussian processes</b>, and <b>scalable inference</b>.
+          </p>
+          <p>
+            Bio: (2–4 sentences about your background, advisor, interests, what you build/analyze, etc.)
+          </p>
+          <p>
+            <b>Contact:</b> yourname (at) mail (dot) com
+          </p>
+        </div>
+
+        <div class="links">
+          <span><b>Follow:</b></span>
+          <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a>
+          <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="./cv.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+        </div>
+      </div>
+
+      <div class="photo">
+        <!-- Put your image at: assets/profile.jpg -->
+        <img src="assets/profile.jpg" alt="Profile photo" />
+      </div>
+    </div>
+
+    <!-- Announcements -->
+    <div class="section">
+      <h2>Announcements</h2>
+      <div class="card">
+        <div class="ann">
+          <div class="date">Sep 2024</div>
+          <div class="item">Our paper on … was accepted in …</div>
+
+          <div class="date">Jul 2024</div>
+          <div class="item">Gave a talk at …</div>
+
+          <div class="date">Nov 2023</div>
+          <div class="item">Joined … / Released …</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Selected publications -->
+    <div class="section">
+      <h2>Selected publications</h2>
+      <div class="card">
+        <div class="pub">
+          <div><span class="badge">arXiv</span></div>
+          <div>
+            <div class="pubtitle">Paper Title One</div>
+            <div class="pubmeta">Your Name, Coauthor — <i>Venue / arXiv</i>, 2025</div>
+            <div class="publinks">
+              <a href="#" target="_blank" rel="noopener">PDF</a>
+              <a href="#" target="_blank" rel="noopener">arXiv</a>
+              <a href="#" target="_blank" rel="noopener">code</a>
+              <a href="#" target="_blank" rel="noopener">bibtex</a>
+            </div>
+          </div>
+
+          <div><span class="badge">Conf</span></div>
+          <div>
+            <div class="pubtitle">Paper Title Two</div>
+            <div class="pubmeta">Your Name, Coauthor — <i>NeurIPS</i>, 2024</div>
+            <div class="publinks">
+              <a href="#" target="_blank" rel="noopener">PDF</a>
+              <a href="#" target="_blank" rel="noopener">code</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      © <span id="y"></span> Your Name · Built with GitHub Pages
+    </footer>
+  </div>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
